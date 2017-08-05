@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+
+Route::get('/news', 'NewsController@index');
+Route::get('/news/{id}', 'NewsController@show')->where('id', '[0-9]+');;
