@@ -14,4 +14,7 @@
 Route::get('/', 'PagesController@home');
 
 Route::get('/news', 'NewsController@index');
-Route::get('/news/{id}', 'NewsController@show')->where('id', '[0-9]+');;
+Route::get('/news/{id}', 'NewsController@show')->where('id', '[0-9]+');
+Route::get('/news/new', 'NewsController@new');
+Route::post('/news', 'NewsController@create');
+Route::delete('/news/{id}', 'NewsController@destroy')->where('id', '[0-9]+')->name('news.destroy');
