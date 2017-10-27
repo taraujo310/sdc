@@ -10,7 +10,7 @@
       </a>
       |
       <small>
-        <a href="#">editar</a>,
+        <a href="{{ route('news.edit', ['id' => $news_item->id]) }}">editar</a>,
         <form class="" action="{{ route('news.destroy', ['id' => $news_item->id]) }}" method="post">
           {{ csrf_field() }}
           {{ method_field('DELETE') }}

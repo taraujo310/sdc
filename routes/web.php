@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@index')->name('root');
 
-Route::get('/news', 'NewsController@index');
+Route::get('/news', 'NewsController@index')->name('news');
 Route::get('/news/{id}', 'NewsController@show')->where('id', '[0-9]+');
 Route::get('/news/new', 'NewsController@new');
 Route::post('/news', 'NewsController@create');
 Route::delete('/news/{id}', 'NewsController@destroy')->where('id', '[0-9]+')->name('news.destroy');
+Route::get('/news/{id}/edit', 'NewsController@edit')->where('id', '[0-9]+')->name('news.edit');
+Route::post('/news/{id}/update', 'NewsController@update')->name('news.update');

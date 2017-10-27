@@ -6,6 +6,14 @@
     <link href="/css/app.css" rel="stylesheet">
   </head>
   <body>
-    @yield('conteudo')
+    @include('layouts.header')
+
+    @include('layouts.nav')
+
+    <div class="content">
+      @yield('conteudo')
+    </div>
+
+    @include('layouts.footer')
   </body>
 </html>
