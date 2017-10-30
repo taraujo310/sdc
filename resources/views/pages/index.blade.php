@@ -1,5 +1,5 @@
 @extends('layouts.application')
 
 @section('conteudo')
-  lalalaia
+  @include('layouts.slider')
 @stop

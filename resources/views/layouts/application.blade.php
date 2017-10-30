@@ -10,7 +10,7 @@
 
     @include('layouts.nav')
 
-    <div class="content">
+    <div id="content-body" class="content">
       @yield('conteudo')
     </div>
 

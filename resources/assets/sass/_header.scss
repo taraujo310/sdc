@@ -1,0 +1,25 @@
+header{
+  text-align: center;
+  background: url(/../images/bg-header.jpg) repeat-x;
+
+  &::before {
+    height: 5px;
+    background: #f5e90c;
+    background: -moz-linear-gradient(left, #f5e90c 0%, #7fc736 20%, #f5e90c 40%, #7fc736 59%, #f5e90c 77%, #7fc736 93%);
+    background: -webkit-linear-gradient(left, #f5e90c 0%,#7fc736 20%,#f5e90c 40%,#7fc736 59%,#f5e90c 77%,#7fc736 93%);
+    background: linear-gradient(to right, #f5e90c 0%,#7fc736 20%,#f5e90c 40%,#7fc736 59%,#f5e90c 77%,#7fc736 93%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5e90c', endColorstr='#7fc736',GradientType=1 );
+    content: '.';
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+
+  .logo {
+    padding: 15px 0;
+
+    img {
+      width: 300px;
+    }
+  }
+}
