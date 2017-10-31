@@ -1,3 +1,92 @@
 #content-body{
-  padding: 20px 0;
+  position: relative;
+  top: -100px;
+
+  section {
+    margin-top: 3em;
+
+    h2  {
+      background: url(/../images/bg-menu.jpg) repeat-x;
+      color: #000;
+      text-align: center;
+      position: relative;
+      padding: 12px 0;
+      font-size: 25px;
+      text-shadow: 1px 1px #fff;
+
+      &::before {
+        height: 2px;
+        background: #f5e90c;
+        background: -moz-linear-gradient(left, #f5e90c 0%, #7fc736 20%, #f5e90c 40%, #7fc736 59%, #f5e90c 77%, #7fc736 93%);
+        background: -webkit-linear-gradient(left, #f5e90c 0%,#7fc736 20%,#f5e90c 40%,#7fc736 59%,#f5e90c 77%,#7fc736 93%);
+        background: linear-gradient(to right, #f5e90c 0%,#7fc736 20%,#f5e90c 40%,#7fc736 59%,#f5e90c 77%,#7fc736 93%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5e90c', endColorstr='#7fc736',GradientType=1 );
+        content: '';
+        left: 0;
+        right: -12px;
+        position: absolute;
+        top: 0px;
+      }
+
+      &.skew-right::after {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        background: url(/../images/bg-menu.jpg) repeat-x;
+
+        transform-origin: bottom left;
+        -ms-transform: skew(-15deg, 0deg);
+        -webkit-transform: skew(-15deg, 0deg);
+        transform: skew(-15deg, 0deg);
+      }
+
+      &.skew-left::after {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        background: url(/../images/bg-menu.jpg) repeat-x;
+
+        transform-origin: top right;
+        -ms-transform: skew(-15deg, 0deg);
+        -webkit-transform: skew(-15deg, 0deg);
+        transform: skew(-15deg, 0deg);
+      }
+
+      &.skew-left::before {
+        right: 0;
+      }
+    }
+  }
+
+  .features-menu {
+    & > div {
+      text-align: center;
+    }
+
+    .feature {
+      background: url(/../images/bg-menu.jpg) repeat;
+      padding: 10px 10px 5px 10px;
+      width: 209px;
+      margin: 0 auto;
+    }
+
+    p {
+      color: #000;
+      font-weight: bold;
+      margin: 5px 0;
+      text-shadow: 1px 1px #fff;
+    }
+  }
 }

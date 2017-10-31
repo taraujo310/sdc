@@ -1,9 +1,14 @@
 header{
   text-align: center;
   background: url(/../images/bg-header.jpg) repeat-x;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 60% 70%;
+  box-shadow: 0px -6px 3px #000 inset;
+  z-index: 5;
+  position: relative;
 
   &::before {
-    height: 5px;
+    height: 6px;
     background: #f5e90c;
     background: -moz-linear-gradient(left, #f5e90c 0%, #7fc736 20%, #f5e90c 40%, #7fc736 59%, #f5e90c 77%, #7fc736 93%);
     background: -webkit-linear-gradient(left, #f5e90c 0%,#7fc736 20%,#f5e90c 40%,#7fc736 59%,#f5e90c 77%,#7fc736 93%);
@@ -13,6 +18,7 @@ header{
     width: 100%;
     position: absolute;
     left: 0;
+    box-shadow: 0 6px 3px #000;
   }
 
   .logo {

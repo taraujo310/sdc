@@ -9,7 +9,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="http://via.placeholder.com/900x300" alt="...">
+      <img src="http://via.placeholder.com/1100x300?text=Mussum+Ipsum,+cacilds+vidis+litro+abertis.+Mé+faiz+elementum+girarzis" alt="...">
       <div class="carousel-caption">
         ...
       </div>
