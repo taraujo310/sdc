@@ -1,5 +1,5 @@
 <?php
-
+$dbopts = parse_url(getenv('DATABASE_URL'));
 return [
 
     /*
@@ -56,11 +56,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DATABASE_URL', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'sdcbrasil'),
-            'username' => env('DB_USERNAME', 'sdcbrasil'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => $dbopts["host"],
+            'port' => $dbopts["port"],
+            'database' => ltrim($dbopts["path"],'/'),
+            'username' => $dbopts["user"],
+            'password' => $dbopts["pass"],
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
