@@ -23,5 +23,9 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     @include('layouts.footer')
+
+    <script src="/js/bootstrap.js" type="text/javascript">
+
+    </script>
   </body>
 </html>
