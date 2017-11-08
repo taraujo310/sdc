@@ -20,3 +20,6 @@ Route::post('/news', 'NewsController@create');
 Route::delete('/news/{id}', 'NewsController@destroy')->where('id', '[0-9]+')->name('news.destroy');
 Route::get('/news/{id}/edit', 'NewsController@edit')->where('id', '[0-9]+')->name('news.edit');
 Route::post('/news/{id}/update', 'NewsController@update')->name('news.update');
+
+Route::get('/events', 'EventsController@index')->name('events');
+Route::get('/events/{id}', 'EventsController@show')->where('id', '[0-9]+');

@@ -12,7 +12,7 @@
         </a>
       </li>
       <li class="@if(Route::is('events')) active @endif">
-        <a href="{{ action('PagesController@index') }}">
+        <a href="{{ action('EventsController@index') }}">
           Eventos
         </a>
       </li>
