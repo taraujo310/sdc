@@ -5,9 +5,14 @@
 
 body {
   background-color: #000;
-  background-image: url(/../images/bg-site.jpg);
+  background-image: url(/../images/bg-menu.jpg);
   background-repeat: repeat;
   font-family: 'Arial';
+}
+
+.inner-body {
+    background-color: rgba(0,0,0,.8);
+    overflow: hidden;
 }
 
 .content {

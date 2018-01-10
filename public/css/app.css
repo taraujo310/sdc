@@ -8385,9 +8385,14 @@ button.close {
 
 body {
   background-color: #000;
-  background-image: url(/../images/bg-site.jpg);
+  background-image: url(/../images/bg-menu.jpg);
   background-repeat: repeat;
   font-family: 'Arial';
+}
+
+.inner-body {
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
 }
 
 .content {
@@ -8481,10 +8486,6 @@ nav ul li a:hover {
   top: -100px;
 }
 
-#content-body section {
-  margin-top: 3em;
-}
-
 #content-body section h2 {
   background: url(/../images/bg-menu.jpg) repeat-x;
   color: #000;
@@ -8493,6 +8494,7 @@ nav ul li a:hover {
   padding: 12px 0;
   font-size: 25px;
   text-shadow: 1px 1px #fff;
+  z-index: 0;
 }
 
 #content-body section h2::before {
@@ -8562,10 +8564,24 @@ nav ul li a:hover {
   text-shadow: 1px 1px #fff;
 }
 
+#content-body .outer-features-menu {
+  background: rgba(100, 100, 100, 0.2);
+  padding: 0 0 3em;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+#content-body .know-sdc,
+#content-body .call-to-gallery,
+#content-body .features-menu {
+  margin-top: 3em;
+}
+
 footer {
   text-align: center;
   height: 100px;
   padding: 20px 0;
+  height: 100%;
 }
 
 footer .content {
@@ -8614,5 +8630,136 @@ footer .copyright p {
   margin: 0;
   color: #333;
   font-size: .7em;
+}
+
+.director {
+  background-image: url(/../images/bg-menu.jpg);
+  overflow: hidden;
+  margin: 60px 0;
+  padding: 10px;
+}
+
+.director .director-inner {
+  background-color: rgba(25, 25, 25, 0.9);
+  padding: 20px 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.director .director-inner::before {
+  height: 2px;
+  background: #f5e90c;
+  background: -webkit-gradient(linear, left top, right top, from(#f5e90c), color-stop(20%, #7fc736), color-stop(40%, #f5e90c), color-stop(59%, #7fc736), color-stop(77%, #f5e90c), color-stop(93%, #7fc736));
+  background: linear-gradient(to right, #f5e90c 0%, #7fc736 20%, #f5e90c 40%, #7fc736 59%, #f5e90c 77%, #7fc736 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5e90c', endColorstr='#7fc736',GradientType=1 );
+  content: '.';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+
+.director .director-inner .avatar {
+  width: 200px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.director .director-inner .avatar img {
+  width: 100%;
+}
+
+.director .director-inner .biography {
+  padding: 0 50px 0 300px;
+}
+
+.director .director-inner .biography h3,
+.director .director-inner .biography span {
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(#aaa), color-stop(20%, #ddd), color-stop(40%, #aaa), color-stop(59%, #ddd), color-stop(77%, #aaa), color-stop(93%, #ddd));
+  background: linear-gradient(to right, #aaa 0%, #ddd 20%, #aaa 40%, #ddd 59%, #aaa 77%, #ddd 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaa', endColorstr='#ddd',GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.director .director-inner .biography h3 {
+  font-size: 2em;
+}
+
+.director .director-inner .biography span {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.events {
+  margin-top: 50px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.events .event {
+  margin-bottom: 60px;
+  text-align: justify;
+}
+
+.events .event h2 {
+  text-align: center;
+  color: #000;
+  background-image: url(/../images/bg-menu.jpg);
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  top: -18px;
+  margin: 0;
+  padding: 7px 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 3px #333;
+          box-shadow: 0 0 3px #333;
+}
+
+.events .event h2::before {
+  height: 2px;
+  background: #f5e90c;
+  background: -webkit-gradient(linear, left top, right top, from(#f5e90c), color-stop(20%, #7fc736), color-stop(40%, #f5e90c), color-stop(59%, #7fc736), color-stop(77%, #f5e90c), color-stop(93%, #7fc736));
+  background: linear-gradient(to right, #f5e90c 0%, #7fc736 20%, #f5e90c 40%, #7fc736 59%, #f5e90c 77%, #7fc736 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5e90c', endColorstr='#7fc736',GradientType=1 );
+  content: ' ';
+  width: 96%;
+  position: absolute;
+  left: 2%;
+  top: 0px;
+}
+
+.events .event h2 .bullet {
+  width: 6px;
+  height: 6px;
+  background: #333;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.events .event h2 .bullet.top {
+  top: 4px;
+}
+
+.events .event h2 .bullet.down {
+  bottom: 4px;
+}
+
+.events .event h2 .bullet.left {
+  left: 4px;
+}
+
+.events .event h2 .bullet.right {
+  right: 4px;
+}
+
+.events .event img {
+  width: 100%;
+  margin-bottom: 10px;
 }
 

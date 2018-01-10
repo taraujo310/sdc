@@ -7,7 +7,7 @@
         </a>
       </li>
       <li class="@if(Route::is('about')) active @endif">
-        <a href="{{ action('PagesController@index') }}">
+        <a href="{{ action('EventsController@index') }}">
           Sobre
         </a>
       </li>

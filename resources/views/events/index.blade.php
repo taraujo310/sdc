@@ -1,35 +1,57 @@
 @extends('layouts.application')
 
 @section('conteudo')
-  @include('layouts.slider')
+    <div class="content">
+        @include('layouts.slider')
 
-  <div class="row">
-    <div class="diretor-geral">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae efficitur neque. Nulla auctor commodo velit. Vestibulum in mollis risus. Mauris lacinia ante eget metus tincidunt, sed maximus nunc imperdiet. Nunc ac ligula pulvinar, laoreet leo eu, dignissim eros. Nullam imperdiet, elit in tempor finibus, orci dolor faucibus metus, a luctus enim est at dui. Vivamus ullamcorper placerat ante, in finibus sem rhoncus in. Duis rutrum lacus porttitor ornare tempus. Nunc vel metus sed felis tincidunt condimentum. In ut nibh purus. Aenean hendrerit lorem sollicitudin ornare porttitor. Nullam at elit sit amet nisl iaculis vehicula. Vivamus ac posuere ligula. Aliquam at tortor at lacus vulputate elementum.
-    </div>
-  </div>
+        <div class="row director">
+            <div class="director-inner">
+                <div class="avatar pull-left">
+                    <img src="/../images/director-avatar.png" alt="Michell Baes">
+                    <h4>Michell Baes</h4>
+                </div>
+                <div class="biography">
+                    <h3>SDC BRASIL</h3>
 
-  <div class="row">
-    @if (count($events) > 0)
-      <div class="events">
-        @foreach ($events as $event)
-          <a href="{{ action('EventsController@show', $event->id) }}">
-            <div class="event col-md-6">
-              <h2>{{ $event->name }}</h2>
-              <img src="{{ $event->cover }}" alt="{{ $event->name }}">
-              <p>{{ $event->description }}</p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae efficitur neque. Nulla auctor commodo velit. Vestibulum in mollis risus. Mauris lacinia ante eget metus tincidunt, sed maximus nunc imperdiet. Nunc ac ligula pulvinar, laoreet leo eu, dignissim eros.
+
+                    <span>DIRETOR GERAL</span>
+                </div>
             </div>
-          </a>
-        @endforeach
-      </div>
-    @else
-    <p>Não há eventos cadastrados</p>
-    @endif
-  </div>
+        </div>
 
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <iframe width="535" height="315" src="https://www.youtube.com/embed/FcpuMa38iZI?rel=0" frameborder="0" allowfullscreen></iframe>
+        <div class="row">
+            @if (count($events) > 0)
+            <div class="events">
+                @foreach ($events as $i => $event)
+                <div class="event col-md-5 @if($i%2 != 0) col-md-offset-2 @endif">
+                    <h2>
+                        {{ $event->name }}
+                        <div class="bullet top left"></div>
+                        <div class="bullet top right"></div>
+                        <div class="bullet down left"></div>
+                        <div class="bullet down right"></div>
+                    </h2>
+                    <img src="{{ $event->cover }}" alt="{{ $event->name }}">
+                    <p>{{ $event->description }}</p>
+                </div>
+                @endforeach
+            </div>
+            @else
+            <p>Não há eventos cadastrados</p>
+            @endif
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <iframe width="100%" height="515" src="https://www.youtube.com/embed/FcpuMa38iZI?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <div class="outer-features-menu">
+        <div class="content">
+            @include('layouts.features-menu')
+        </div>
+    </div>
 @stop
